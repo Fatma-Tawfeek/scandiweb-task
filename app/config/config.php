@@ -8,6 +8,6 @@ define('DB_NAME', 'products');
 // App Root
 define('APPROOT',dirname(dirname(__FILE__)));
 // URL Root
-define('URLROOT', 'http://localhost/traversyMVC');
+define('URLROOT', 'https://guarded-eyrie-26648.herokuapp.com/');
 // Site Name
-define('SITENAME', 'Scandiweb Test');
+define('SITENAME', 'Scandiweb Task');
