@@ -18,7 +18,7 @@ class Database {
 
     public function __construct(){
         // Set DNS
-        $dns = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $dns = 'pgsql:host=' . $this->host .'port=5432;' . ';dbname=' . $this->dbname;
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
