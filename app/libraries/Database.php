@@ -7,10 +7,10 @@
 */
 
 class Database {
-    private $host = DB_HOST;
-    private $user = DB_USER;
-    private $pass = DB_PASS;
-    private $dbname = DB_NAME;
+    private $host = 'ec2-54-82-205-3.compute-1.amazonaws.com';
+    private $user = 'lnntrdlnkdoqmn';
+    private $pass = '7d4e691001361618733d4563ba753296b7abe500d1e92f067b8b9d6c8e3054f2';
+    private $dbname = 'dcadncedpg33r3';
 
     private $dbh;
     private $stmt;
