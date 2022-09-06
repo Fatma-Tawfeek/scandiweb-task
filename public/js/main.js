@@ -24,7 +24,6 @@ if (value == 'Dvd') {
 });
 
 $( "#product_form" ).submit(function( event ) {
-    event.preventDefault();
 
     if( !$('#product_form input').val() ) {
           alert('Please, submit required data');
