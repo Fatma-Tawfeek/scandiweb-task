@@ -23,16 +23,14 @@ if (value == 'Dvd') {
 }
 });
 
-$('#product_form input').blur(function()
-{
-    if( !$(this).val() ) {
+$( "#product_form" ).submit(function( event ) {
+    event.preventDefault();
+
+    if( !$('#product_form input').val() ) {
           alert('Please, submit required data');
     }
-});
 
-$('#product_form input[type=number]').blur(function()
-{
-    if(!$.isNumeric($(this).val()) ) {
+    if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
           alert('Please, provide the data of indicated type');
     }
 });
