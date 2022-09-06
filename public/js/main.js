@@ -1,7 +1,4 @@
 //Form
-let dvdForm = $('#dvd-form');
-let bookForm = $('#book-form');
-let furnitureForm = $('#furniture-form');
 let submitBtn = document.getElementsByName('submit');
 
 $('#productType').change(function() {
@@ -14,6 +11,9 @@ if (value == 'Dvd') {
     bookForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
+    if(!$('#size').val()){
+        alert('Please, submit required data');
+    }
     $('#size').attr('required', '');
     $('#weight').removeAttr("required");
     $('#height').removeAttr("required");
