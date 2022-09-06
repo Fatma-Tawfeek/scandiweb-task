@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 <div class="container">
         <div class="row mt-5">
             <div class="col-8">
-                <h1>Proudct Add</h1>
+                <h1>Product Add</h1>
             </div>
             <div class="col-1 mt-2">
                 <button name="submit" class="btn btn-primary mr-2" form="product_form">Save</button>

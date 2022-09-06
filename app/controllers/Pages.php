@@ -12,6 +12,6 @@ class Pages extends Controller {
     }
 
     public function add(){
-        $this->view('pages/add');
+        $this->view('pages/add-product');
     }
 }
