@@ -28,9 +28,9 @@ if (isset($_POST['submit'])) {
                     <label class="mt-4" for="price">Price ($):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8" required>
-                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" required>
-                    <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price" required>
+                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
+                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name">
+                    <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price">
                 </div>
             </div>
             <div class="row">
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                     <label for="size">Size (MB):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" class="form-control" step="0.01" name="size" id="size" placeholder="#size" required>
+                    <input type="number" class="form-control" step="0.01" name="size" id="size" placeholder="#size">
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide size</p>
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
                     <label for="weight">Weight (KG):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" class="form-control" step="0.01" name="weight" id="weight" placeholder="#weight" required>
+                    <input type="number" class="form-control" step="0.01" name="weight" id="weight" placeholder="#weight">
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide weight</p>
@@ -75,9 +75,9 @@ if (isset($_POST['submit'])) {
                     <label class="mt-4" for="length">Length (CM):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" step="0.01" class="form-control" name="height" id="height" placeholder="#height" required>
-                    <input type="number" step="0.01" class="form-control mt-3" name="width" id="width" placeholder="#width" required>
-                    <input type="number" step="0.01" class="form-control mt-3" name="length" id="length" placeholder="#length" required>
+                    <input type="number" step="0.01" class="form-control" name="height" id="height" placeholder="#height">
+                    <input type="number" step="0.01" class="form-control mt-3" name="width" id="width" placeholder="#width">
+                    <input type="number" step="0.01" class="form-control mt-3" name="length" id="length" placeholder="#length">
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide dimensions</p>

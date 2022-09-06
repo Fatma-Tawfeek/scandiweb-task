@@ -11,35 +11,21 @@ if (value == 'Dvd') {
     bookForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
-    if(!$('#size').val()){
-        alert('Please, submit required data');
-    }
-    $('#size').attr('required', '');
-    $('#weight').removeAttr("required");
-    $('#height').removeAttr("required");
-    $('#width').removeAttr("required");
-    $('#length').removeAttr("required");
-
 } else if (value == 'Book') {
     bookForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
-    $('#size').removeAttr("required");
-    $('#weight').attr('required', '');
-    $('#height').removeAttr("required");
-    $('#width').removeAttr("required");
-    $('#length').removeAttr("required");
 } else if (value == 'Furniture') {
     furnitureForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     bookForm.addClass('hidden');
-
-    $('#size').removeAttr("required");
-    $('#weight').removeAttr("required");
-    $('#height').attr('required', '');
-    $('#width').attr('required', '');
-    $('#length').attr('required', '');
-
 }
+});
+
+$('#product_form input').blur(function()
+{
+    if( !$(this).val() ) {
+          alert('Please, submit required data')
+    }
 });
