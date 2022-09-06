@@ -22,9 +22,9 @@ class Product
         $this->name = $data['name'];
         $this->sku = $data['sku'];
         $this->price = $data['price'];
-        $this->productType = $data['producttype']; 
+        $this->productType = $data['productType']; 
         
-        $request = $data['producttype'];
+        $request = $data['productType'];
         $attr = $this->setAttribute(new $request, $data);
         $this->attribute = $attr; 
                   
@@ -32,7 +32,7 @@ class Product
     }
 
     function addProduct() {
-        $this->db->query("INSERT INTO products (sku, name, price, producttype, attribute) 
+        $this->db->query("INSERT INTO products (sku, name, price, productType, attribute) 
         VALUES ('" . $this->sku . "',
              '" . $this->name . "',
              '" . $this->price . "',
