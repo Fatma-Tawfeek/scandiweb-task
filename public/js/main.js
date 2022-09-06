@@ -26,6 +26,13 @@ if (value == 'Dvd') {
 $('#product_form input').blur(function()
 {
     if( !$(this).val() ) {
-          alert('Please, submit required data')
+          alert('Please, submit required data');
+    }
+});
+
+$('#product_form input[type=number]').blur(function()
+{
+    if(!$.isNumeric($(this).val()) ) {
+          alert('Please, provide the data of indicated type');
     }
 });
