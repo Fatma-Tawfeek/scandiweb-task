@@ -6,18 +6,16 @@ if (isset($_POST['submit'])) {
     header("Location: index.php");   
 }
  ?>
-
 <div class="container">
         <div class="row mt-5">
             <div class="col-8">
-                <h1>Product Add</h1>
+                <h1>Proudct Add</h1>
             </div>
-            
             <div class="col-1 mt-2">
-                <button name="submit" type="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
+                <button name="submit" class="btn btn-primary mr-2" form="product_form">Save</button>
             </div>
             <div class="col-3 mt-2">
-                <a href="<?php echo URLROOT; ?>/pages/index" class="btn btn-danger">Cancel</a>
+                <a href="index.php" class="btn btn-danger">Cancel</a>
             </div>
         </div>
         <hr>
@@ -87,6 +85,8 @@ if (isset($_POST['submit'])) {
         </form>
 
     </div>
+
+
     <script src="<?php echo URLROOT; ?>/js/main.js"></script>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
