@@ -2,13 +2,8 @@
 require APPROOT . '/views/inc/header.php';
 
 if (isset($_POST['submit'])) {    
-    $val = new Validation;
-    $val->name('name')->value($_POST['name'])->pattern('words')->required();
-    if($val->isSuccess()){
-        (new Product($_POST))->addProduct();        
-    }else{
-        echo $val->displayErrors();
-    }
+    (new Product($_POST))->addProduct();     
+    header("Location: index.php");   
 }
  ?>
 
@@ -26,7 +21,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <hr>
-        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" id="product_form">
+        <form method="POST" id="product_form">
             <div class="row">
                 <div class="col-2 mt-3">
                     <label for="sku">SKU:</label><br>
@@ -34,12 +29,9 @@ if (isset($_POST['submit'])) {
                     <label class="mt-4" for="price">Price ($):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
-                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name">
-                    <div class="error">
-                        <?php echo $errors['name'] ?? '' ?>
-                    </div>
-                    <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price">
+                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8" required>
+                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" required>
+                    <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price" required>
                 </div>
             </div>
             <div class="row">
@@ -60,7 +52,7 @@ if (isset($_POST['submit'])) {
                     <label for="size">Size (MB):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" class="form-control" step="0.01" name="size" id="size" placeholder="#size">
+                    <input type="number" class="form-control" step="0.01" name="size" id="size" placeholder="#size" required>
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide size</p>
@@ -71,7 +63,7 @@ if (isset($_POST['submit'])) {
                     <label for="weight">Weight (KG):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" class="form-control" step="0.01" name="weight" id="weight" placeholder="#weight">
+                    <input type="number" class="form-control" step="0.01" name="weight" id="weight" placeholder="#weight" required>
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide weight</p>
@@ -84,9 +76,9 @@ if (isset($_POST['submit'])) {
                     <label class="mt-4" for="length">Length (CM):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="number" step="0.01" class="form-control" name="height" id="height" placeholder="#height">
-                    <input type="number" step="0.01" class="form-control mt-3" name="width" id="width" placeholder="#width">
-                    <input type="number" step="0.01" class="form-control mt-3" name="length" id="length" placeholder="#length">
+                    <input type="number" step="0.01" class="form-control" name="height" id="height" placeholder="#height" required>
+                    <input type="number" step="0.01" class="form-control mt-3" name="width" id="width" placeholder="#width" required>
+                    <input type="number" step="0.01" class="form-control mt-3" name="length" id="length" placeholder="#length" required>
                 </div>
                 <div class="text-muted mt-3">
                     <p>Please, provide dimensions</p>
