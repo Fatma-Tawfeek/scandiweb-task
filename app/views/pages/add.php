@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
                 <h1>Product Add</h1>
             </div>
             <div class="col-1 mt-2">
-                <button name="submit" class="btn btn-primary mr-2" form="product_form">Save</button>
+                <button name="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
             </div>
             <div class="col-3 mt-2">
                 <a href="<?php echo URLROOT; ?>/pages/index" class="btn btn-danger">Cancel</a>
