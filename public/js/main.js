@@ -23,7 +23,8 @@ if (value == 'Dvd') {
 }
 });
 
-$( "#product_form" ).submit(function( event ) {
+$(document).ready(function(){
+$( "#product_form" ).submit(function() {
 
     if( !$('#product_form input').val() ) {
           alert('Please, submit required data');
@@ -32,4 +33,5 @@ $( "#product_form" ).submit(function( event ) {
     if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
           alert('Please, provide the data of indicated type');
     }
+})
 });
