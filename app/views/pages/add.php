@@ -12,6 +12,7 @@ if (isset($_POST['submit'])) {
             <div class="col-8">
                 <h1>Product Add</h1>
             </div>
+            <form method="POST" id="product_form">
             <div class="col-1 mt-2">
                 <button name="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
             </div>
@@ -20,7 +21,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <hr>
-        <form method="POST" id="product_form">
+        
             <div class="row">
                 <div class="col-2 mt-3">
                     <label for="sku">SKU:</label><br>
