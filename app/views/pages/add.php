@@ -2,12 +2,13 @@
 require APPROOT . '/views/inc/header.php';
 
 if (isset($_POST['submit'])) {    
-    $validation = new Validation($_POST);
-    $errors = $validation->validateForm();
-    if(empty($errors)){
-        (new Product($_POST))->addProduct();
-         header("Location: index.php");
-    }   
+    $val = new Validation;
+    $val->name('name')->value($_POST['name'])->pattern('words')->required();
+    if($val->isSuccess()){
+        echo 'Validation ok!';        
+    }else{
+        echo $val->displayErrors();
+    }
 }
  ?>
 
@@ -34,7 +35,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-3 mt-3">
                     <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
-                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" value="<?php echo htmlspecialchars($_POST['name']) ?? '' ?>">
+                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" pattern="<?php echo $val->patterns['words']; ?>">
                     <div class="error">
                         <?php echo $errors['name'] ?? '' ?>
                     </div>
