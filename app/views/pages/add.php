@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
                     <label class="mt-4" for="price">Price ($):</label>
                 </div>
                 <div class="col-3 mt-3">
-                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8" required>
+                    <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" required>
                     <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" required>
                     <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price" required>
                 </div>
