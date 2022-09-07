@@ -24,7 +24,7 @@ if (value == 'Dvd') {
 });
 
 $(document).ready(function(){
-$( "#submit-btn" ).click(function() {
+$( "#product_form" ).submit(function(event) {
 
     if( !$('#sku').val() ) {
           alert('Please, submit required data');
@@ -61,5 +61,8 @@ if( !$('#length').val() ) {
     if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
           alert('Please, provide the data of indicated type');
     }
+
+    event.preventDefault();
+
 })
 });
