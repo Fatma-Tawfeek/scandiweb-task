@@ -26,7 +26,7 @@ if (value == 'Dvd') {
 $(function() {
     // Initialize form validation on the registration form.
     // It has the name attribute "registration"
-    $("#form-product").validate({
+    $("#product_form").validate({
       // Specify validation rules
       rules: {
         // The key name on the left side is the name attribute
