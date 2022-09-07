@@ -2,6 +2,8 @@
 require APPROOT . '/views/inc/header.php';
 
 if (isset($_POST['submit'])) {    
+    $validation = new Validation($_POST);
+    $errors = $validation->validateForm();
     (new Product($_POST))->addProduct();
     header("Location: index.php");
 }
@@ -12,9 +14,9 @@ if (isset($_POST['submit'])) {
             <div class="col-8">
                 <h1>Product Add</h1>
             </div>
-            <form method="POST" id="product_form">
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" id="product_form">
             <div class="col-1 mt-2">
-                <button name="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
+                <button name="submit" type="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
             </div>
             <div class="col-3 mt-2">
                 <a href="<?php echo URLROOT; ?>/pages/index" class="btn btn-danger">Cancel</a>
@@ -31,6 +33,9 @@ if (isset($_POST['submit'])) {
                 <div class="col-3 mt-3">
                     <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
                     <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name">
+                    <div class="error">
+                        <?php echo $errors['name'] ?? '' ?>
+                    </div>
                     <input type="number" class="form-control mt-3" step="0.01" class="mt-3" name="price" id="price" placeholder="#price">
                 </div>
             </div>
