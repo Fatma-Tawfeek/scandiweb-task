@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $val = new Validation;
     $val->name('name')->value($_POST['name'])->pattern('words')->required();
     if($val->isSuccess()){
-        echo 'Validation ok!';        
+        (new Product($_POST))->addProduct();        
     }else{
         echo $val->displayErrors();
     }
