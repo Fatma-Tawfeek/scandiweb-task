@@ -1,6 +1,6 @@
 <?php 
 
-class  validation{
+class  Validation{
 
   private $data;
   private $errors = [];

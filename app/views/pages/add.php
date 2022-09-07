@@ -4,8 +4,10 @@ require APPROOT . '/views/inc/header.php';
 if (isset($_POST['submit'])) {    
     $validation = new Validation($_POST);
     $errors = $validation->validateForm();
-    (new Product($_POST))->addProduct();
-    header("Location: index.php");
+    if(empty($errors)){
+        (new Product($_POST))->addProduct();
+         header("Location: index.php");
+    }   
 }
  ?>
 
