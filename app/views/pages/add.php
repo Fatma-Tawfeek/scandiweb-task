@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
             <div class="col-8">
                 <h1>Product Add</h1>
             </div>
-            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" id="product_form">
+            
             <div class="col-1 mt-2">
                 <button name="submit" type="submit" id="submit-btn" class="btn btn-primary mr-2" form="product_form">Save</button>
             </div>
@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
         <hr>
-        
+        <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" id="product_form">
             <div class="row">
                 <div class="col-2 mt-3">
                     <label for="sku">SKU:</label><br>
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-3 mt-3">
                     <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
-                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name">
+                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" value="<?php echo htmlspecialchars($_POST['name']) ?? '' ?>">
                     <div class="error">
                         <?php echo $errors['name'] ?? '' ?>
                     </div>
