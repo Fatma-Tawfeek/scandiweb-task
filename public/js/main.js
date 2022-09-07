@@ -11,58 +11,109 @@ if (value == 'Dvd') {
     bookForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
+    $(document).ready(function(){
+        $( "#product_form" ).submit(function(event) {
+        
+            if( !$('#sku').val() ) {
+                  alert('Please, submit required data');
+            }
+        
+            if( !$('#name').val() ) {
+                alert('Please, submit required data');
+          }
+        
+          if( !$('#price').val() ) {
+            alert('Please, submit required data');
+        }
+        
+        if( !$('#size').val() ) {
+            alert('Please, submit required data');
+        }
+        
+            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
+                  alert('Please, provide the data of indicated type');
+            }
+        
+            event.preventDefault();
+        
+        })
+        });
+
 } else if (value == 'Book') {
     bookForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
+    $(document).ready(function(){
+        $( "#product_form" ).submit(function(event) {
+        
+            if( !$('#sku').val() ) {
+                  alert('Please, submit required data');
+            }
+        
+            if( !$('#name').val() ) {
+                alert('Please, submit required data');
+          }
+        
+          if( !$('#price').val() ) {
+            alert('Please, submit required data');
+        }
+        
+        
+        if( !$('#weight').val() ) {
+            alert('Please, submit required data');
+        }
+        
+            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
+                  alert('Please, provide the data of indicated type');
+            }
+        
+            event.preventDefault();
+        
+        })
+        });
+
 } else if (value == 'Furniture') {
     furnitureForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     bookForm.addClass('hidden');
+
+    $(document).ready(function(){
+        $( "#product_form" ).submit(function(event) {
+        
+            if( !$('#sku').val() ) {
+                  alert('Please, submit required data');
+            }
+        
+            if( !$('#name').val() ) {
+                alert('Please, submit required data');
+          }
+        
+          if( !$('#price').val() ) {
+            alert('Please, submit required data');
+        }
+    
+        
+        if( !$('#height').val() ) {
+            alert('Please, submit required data');
+        }
+        
+        if( !$('#width').val() ) {
+            alert('Please, submit required data');
+        }
+        
+        if( !$('#length').val() ) {
+            alert('Please, submit required data');
+        }
+        
+            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
+                  alert('Please, provide the data of indicated type');
+            }
+        
+            event.preventDefault();
+        
+        })
+        });
 }
 });
 
-$(document).ready(function(){
-$( "#product_form" ).submit(function(event) {
-
-    if( !$('#sku').val() ) {
-          alert('Please, submit required data');
-    }
-
-    if( !$('#name').val() ) {
-        alert('Please, submit required data');
-  }
-
-  if( !$('#price').val() ) {
-    alert('Please, submit required data');
-}
-
-if( !$('#size').val() ) {
-    alert('Please, submit required data');
-}
-
-if( !$('#weight').val() ) {
-    alert('Please, submit required data');
-}
-
-if( !$('#height').val() ) {
-    alert('Please, submit required data');
-}
-
-if( !$('#width').val() ) {
-    alert('Please, submit required data');
-}
-
-if( !$('#length').val() ) {
-    alert('Please, submit required data');
-}
-
-    if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
-          alert('Please, provide the data of indicated type');
-    }
-
-    event.preventDefault();
-
-})
-});
