@@ -11,109 +11,49 @@ if (value == 'Dvd') {
     bookForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
-    $(document).ready(function(){
-        $( "#product_form" ).submit(function(event) {
-        
-            if( !$('#sku').val() ) {
-                  alert('Please, submit required data');
-            }
-        
-            if( !$('#name').val() ) {
-                alert('Please, submit required data');
-          }
-        
-          if( !$('#price').val() ) {
-            alert('Please, submit required data');
-        }
-        
-        if( !$('#size').val() ) {
-            alert('Please, submit required data');
-        }
-        
-            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
-                  alert('Please, provide the data of indicated type');
-            }
-        
-            event.preventDefault();
-        
-        })
-        });
-
 } else if (value == 'Book') {
     bookForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     furnitureForm.addClass('hidden');
 
-    $(document).ready(function(){
-        $( "#product_form" ).submit(function(event) {
-        
-            if( !$('#sku').val() ) {
-                  alert('Please, submit required data');
-            }
-        
-            if( !$('#name').val() ) {
-                alert('Please, submit required data');
-          }
-        
-          if( !$('#price').val() ) {
-            alert('Please, submit required data');
-        }
-        
-        
-        if( !$('#weight').val() ) {
-            alert('Please, submit required data');
-        }
-        
-            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
-                  alert('Please, provide the data of indicated type');
-            }
-        
-            event.preventDefault();
-        
-        })
-        });
-
 } else if (value == 'Furniture') {
     furnitureForm.removeClass('hidden');
     dvdForm.addClass('hidden');
     bookForm.addClass('hidden');
-
-    $(document).ready(function(){
-        $( "#product_form" ).submit(function(event) {
-        
-            if( !$('#sku').val() ) {
-                  alert('Please, submit required data');
-            }
-        
-            if( !$('#name').val() ) {
-                alert('Please, submit required data');
-          }
-        
-          if( !$('#price').val() ) {
-            alert('Please, submit required data');
-        }
-    
-        
-        if( !$('#height').val() ) {
-            alert('Please, submit required data');
-        }
-        
-        if( !$('#width').val() ) {
-            alert('Please, submit required data');
-        }
-        
-        if( !$('#length').val() ) {
-            alert('Please, submit required data');
-        }
-        
-            if(!$.isNumeric($('#product_form input[type=number]').val()) ) {
-                  alert('Please, provide the data of indicated type');
-            }
-        
-            event.preventDefault();
-        
-        })
-        });
 }
 });
 
+$(function() {
+    // Initialize form validation on the registration form.
+    // It has the name attribute "registration"
+    $("#form-product").validate({
+      // Specify validation rules
+      rules: {
+        // The key name on the left side is the name attribute
+        // of an input field. Validation rules are defined
+        // on the right side
+        sku: "required",
+        name: "required",
+        price: {
+          required: true,
+          // Specify that email should be validated
+          // by the built-in "email" rule
+          number: true
+        }
+      },
+      // Specify validation error messages
+      messages: {
+        sku: "Please enter your firstname",
+        name: "Please enter your lastname",
+        price: {
+          required: "Please provide a password",
+          number: "Your password must be at least 5 characters long"
+        }
+      },
+      // Make sure the form is submitted to the destination defined
+      // in the "action" attribute of the form when valid
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+  });

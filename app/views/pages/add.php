@@ -87,5 +87,6 @@ if (isset($_POST['submit'])) {
 
     </div>
     <script src="<?php echo URLROOT; ?>/js/main.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
