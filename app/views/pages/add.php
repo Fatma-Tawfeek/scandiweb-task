@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="col-3 mt-3">
                     <input type="text" class="form-control" name="sku" id="sku" placeholder="#sku" minlength="8" maxlength="8">
-                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name" pattern="<?php echo $val->patterns['words']; ?>">
+                    <input type="text" class="form-control mt-3" name="name" id="name" placeholder="#name">
                     <div class="error">
                         <?php echo $errors['name'] ?? '' ?>
                     </div>
