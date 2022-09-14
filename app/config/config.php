@@ -8,6 +8,6 @@ define('DB_NAME', 'dcadncedpg33r3');
 // App Root
 define('APPROOT',dirname(dirname(__FILE__)));
 // URL Root
-define('URLROOT', 'https://guarded-eyrie-26648.herokuapp.com/');
+define('URLROOT', 'https://guarded-eyrie-26648.herokuapp.com');
 // Site Name
 define('SITENAME', 'Scandiweb Task');
