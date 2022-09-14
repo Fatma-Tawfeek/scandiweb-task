@@ -6,7 +6,7 @@
                 <h1>Products List</h1>
             </div>
             <div class="col-3 col-md-1 mt-2">
-                <button onclick="window.location.href='<?php echo URLROOT; ?>/products/add'" class="btn btn-primary">ADD</button>
+                <button onclick="window.location.href='<?php echo URLROOT; ?>/products/add'" class="btn btn-primary" id="add">ADD</button>
             </div>
             <div class="col-5 col-md-3 mt-2">
                 <button name="delete" class="btn btn-danger" id="delete-product-btn" form="form">MASS DELETE</button>
@@ -25,9 +25,9 @@
                                 <h6><?php echo $product->sku ?></h6>
                                 <h6><?php echo $product->name ?></h6>
                                 <p class="mb-2 text-muted"><?php echo $product->price ?>$</p>                                
-                               <?= ($product->size) ? '<p class="card-text">' . '<span class="font-weight-bold">Size:</span> ' . $product->size . ' MB' . '</p>' : '' ; ?>
-                               <?= ($product->weight) ? '<p class="card-text">' . '<span class="font-weight-bold">Weight:</span> ' . $product->weight . 'KG' . '</p>' : ''; ?>
-                               <?= ($product->height) ? '<p class="card-text">' . '<span class="font-weight-bold">Dimensions:</span> ' . $product->height . 'x' . $product->width . 'x' . $product->length . '</p>' : ''; ?>
+                               <?= ($product->size) ? '<p class="card-text">' . 'Size:' . $product->size . ' MB' . '</p>' : '' ; ?>
+                               <?= ($product->weight) ? '<p class="card-text">' . 'Weight:' . $product->weight . 'KG' . '</p>' : ''; ?>
+                               <?= ($product->height) ? '<p class="card-text">' . 'Dimensions:' . $product->height . 'x' . $product->width . 'x' . $product->length . '</p>' : ''; ?>
                             </div>
                         </div>
                 </div>
