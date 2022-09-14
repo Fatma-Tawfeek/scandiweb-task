@@ -4,8 +4,7 @@
 require_once 'config/config.php';
 
 // Load helpers
-include_once 'helpers/Service.php';
-include_once 'helpers/Type.php';
+include_once 'helpers/url_helper.php';
 
 // Autoload Core Libraries
 spl_autoload_register(function($className){
