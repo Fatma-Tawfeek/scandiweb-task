@@ -6,7 +6,7 @@
                 <h1>Products List</h1>
             </div>
             <div class="col-3 col-md-1 mt-2">
-                <button onclick="window.location.href='<?php echo URLROOT; ?>/products/add'" class="btn btn-primary" id="add">ADD</button>
+                <button onclick="window.location.href='<?php echo URLROOT; ?>/products/add'" class="btn btn-primary">ADD</button>
             </div>
             <div class="col-5 col-md-3 mt-2">
                 <button name="delete" class="btn btn-danger" id="delete-product-btn" form="form">MASS DELETE</button>

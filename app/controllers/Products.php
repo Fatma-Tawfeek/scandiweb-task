@@ -127,9 +127,6 @@
             }
           }
         }
-
-
-
          
         // Make sure errors are empty
         if(empty($data['name_err']) && empty($data['sku_err']) && empty($data['price_err']) && empty($data['size_err']) && empty($data['weight_err']) && empty($data['height_err']) && empty($data['width_err']) && empty($data['length_err'])){
@@ -176,7 +173,7 @@
         if($this->productModel->deleteProducts($all)){
           redirect('');
           } else {
-            die('Something went wrong');
+            redirect('');
           }
       } else {
         redirect('');
