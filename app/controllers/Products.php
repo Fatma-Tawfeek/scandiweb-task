@@ -167,13 +167,13 @@
 
     // Delete Post
     public function delete(){
-      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      if($_POST["checkbox"]){
         //Execute
         $all = implode(",", $_POST["checkbox"]);
         if($this->productModel->deleteProducts($all)){
           redirect('');
           } else {
-            redirect('');
+            die('Something went wrong');
           }
       } else {
         redirect('');
