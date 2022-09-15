@@ -3,7 +3,7 @@
 <div class="container">
         <div class="row mt-5">
             <div class="col-6 col-md-8">
-                <h1>Proudct Add</h1>
+                <h1>Product Add</h1>
             </div>
             <div class="col-3 col-md-1">
                <button name="submit" class="btn btn-primary mr-2" form="product_form">Save</button>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="row <?php echo ($data['productType'] === 'Furniture') ? '' : 'd-none'; ?>" id="furniture-form">
-                <div class="col-9 col-md-3 mt-3">
+                <div class="col-12 col-md-3 mt-3">
                     <label for="height">Height (CM):</label>
                     <input type="text" step="0.01" class="form-control <?php echo (!empty($data['height_err'])) ? 'is-invalid' : ''; ?>" value="<?php echo $data['height'] ?? NULL ; ?>" name="height" id="height" placeholder="#height">
                     <span class="invalid-feedback"><?php echo $data['height_err']; ?></span>
